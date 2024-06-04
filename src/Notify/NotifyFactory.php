@@ -46,6 +46,7 @@ class NotifyFactory
             case 'bark':
                 return new Bark($options);
             case 'sms':
+                return new Telegram($options);
             case 'email':
                 throw new Exception("unimplemented type {$type}");
             default:
