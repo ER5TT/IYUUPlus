@@ -17,8 +17,7 @@
               <option value="iyuu">iyuu</option>
               <option value="serverchan">server酱</option>
               <option value="bark">Bark</option>
-              <option value="sms">短信(未实现)</option>
-              <option value="email">E-mail(未实现)</option>
+              <option value="sms">Telegram</option>
             </select>
             </div>
           </div>
@@ -90,9 +89,15 @@
   </div>
   {{# break; case 'sms': }}
   <div class="layui-form-item">
-    <label class="layui-form-label required">手机号</label>
+    <label class="layui-form-label required">机器人Token</label>
     <div class="layui-input-block">
-      <input type="text" name="options[phone]" lay-verify="required" lay-reqtext="手机号不能为空" placeholder="请输入手机号" class="layui-input">
+      <input type="text" name="options[bot_token]" lay-verify="required" lay-reqtext="机器人Token 不能为空" placeholder="请输入 机器人Token" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label required">频道ID</label>
+    <div class="layui-input-block">
+      <input type="text" name="options[chat_id]" lay-verify="required" lay-reqtext="频道ID 不能为空" placeholder="请输入 频道ID" class="layui-input">
     </div>
   </div>
   {{# break; default: }}
