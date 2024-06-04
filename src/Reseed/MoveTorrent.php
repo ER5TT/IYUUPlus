@@ -407,7 +407,6 @@ class MoveTorrent extends AutoReseed
             $desp .= $br . '转移任务完成，未发现种子需要转移' . $br;
             $desp .= $br . '----------' . $br;
         }
-        $desp .= $br . '*此消息将在3天后过期*。';
         return static::send_notify($text, $desp);
     }
 }
